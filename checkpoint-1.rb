@@ -1,4 +1,3 @@
-require 'pry'
 require 'minitest/autorun'
 
 class Book

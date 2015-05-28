@@ -1,9 +1,26 @@
+require 'pry'
 require 'minitest/autorun'
 
 class Book
+  attr_reader :title, :price
+  def initialize title, price
+    @title = title
+    @price = price
+  end
 end
 
 class Cart
+  def initialize
+    @item_count = item_count
+  end
+
+  def add
+    
+  end
+
+  def value
+    
+  end
 end
 
 class ShoppingTest < MiniTest::Test

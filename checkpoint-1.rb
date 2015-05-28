@@ -10,19 +10,18 @@ class Book
 end
 
 class Cart
-  attr_reader :book
+attr_reader :cart
 
   def initialize
-    @cart =[]
+    @cart = []
   end
 
-  def books
-     @book = Book.new title, price
-  end
-
-  def add book
-    @cart.push(@book)
-    return @cart
+  def add *books
+    books.each do |book|
+      @cart << book
+    end
+    # @cart.push(books)
+    # return @cart
   end
 
   def item_count
@@ -60,4 +59,5 @@ class ShoppingTest < MiniTest::Test
     cart.add Book.new("Oh, The Places You'll Go!", 8)
     assert_equal 18, cart.value
   end
+
 end

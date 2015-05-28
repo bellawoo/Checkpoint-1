@@ -10,16 +10,31 @@ class Book
 end
 
 class Cart
+  attr_reader :book
+
   def initialize
-    @item_count = item_count
+    @cart =[]
   end
 
-  def add
-    
+  def books
+     @book = Book.new title, price
+  end
+
+  def add book
+    @cart.push(@book)
+    return @cart
+  end
+
+  def item_count
+    @cart.length
   end
 
   def value
-    
+    total = 0
+    @cart.each do |book|
+      total += book.price
+    end
+    return total
   end
 end
 

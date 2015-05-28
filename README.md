@@ -2,4 +2,4 @@
 
 A simple version of the game "Hangman"
 
-!(http://i.imgur.com/SjGYI1k.jpg "Ship it squirrel")
+![Ship it squirrel](http://i.imgur.com/SjGYI1k.jpg "Ship it squirrel")
